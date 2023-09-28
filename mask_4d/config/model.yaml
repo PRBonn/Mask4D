@@ -1,0 +1,41 @@
+EXPERIMENT:
+    ID: mask_4d
+
+TRAIN:
+    STEP: 80
+    DECAY: 0.1
+    LR: 0.0001
+    MAX_EPOCH: 50
+    BATCH_SIZE: 1
+    NUM_WORKERS: 10
+    N_GPUS: -1
+
+    N_SCANS: 3
+    INTERVAL: 10
+    BATCH_ACC: 2
+
+MODEL:
+    OBJECT_MASK_THRESHOLD: 0.8
+    OVERLAP_THRESHOLD: 0.8
+    TR_LIFE: 5
+
+LOSS:
+    LOSS_WEIGHTS_KEYS: ['loss_ce','loss_dice','loss_mask','loss_wrong_mask','loss_wrong_dice']
+    LOSS_WEIGHTS: [2.0, 5.0, 5.0, 20.0, 20.0]
+    DET_W: 1
+    DET_W_AUX: 0.5
+    TRACK_W: 50
+    EOS_COEF: 0.1
+    NUM_POINTS: 50000
+    SEM:
+        WEIGHTS: [2,6] #Ce, Lovasz
+
+KITTI:
+    PATH: data/kitti
+    CONFIG: datasets/semantic-kitti.yaml
+    NUM_CLASSES: 20
+    IGNORE_LABEL: 0
+    MIN_POINTS: 10
+    SPACE: # coord limits
+        [[-51.2,51.2],[-51.2,51.2],[-4.0, 2.4]]
+    SUB_NUM_POINTS: 80000

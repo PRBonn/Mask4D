@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+preferred-citation:
+  title: "Mask4D: End-to-End Mask-Based 4D Panoptic Segmentation for LiDAR Sequences"
+  doi: ""
+  year: "2023"
+  type: article
+  journal: "IEEE Robotics and Automation Letters (RA-L)"
+  url: https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/marcuzzi2023ral-meem.pdf
+  codeurl: https://github.com/PRBonn/Mask4D
+  authors:
+    - family-names: Marcuzzi
+      given-names: Rodrigo
+    - family-names: Nunes
+      given-names: Lucas
+    - family-names: Wiesmann
+      given-names: Louis
+    - family-names: Marks
+      given-names: Elias
+    - family-names: Behley
+      given-names: Jens
+    - family-names: Stachniss
+      given-names: Cyrill
