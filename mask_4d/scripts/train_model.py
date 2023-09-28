@@ -27,9 +27,6 @@ def main(w, ckpt):
         yaml.safe_load(open(join(getDir(__file__), "../config/decoder.yaml")))
     )
     cfg = edict({**model_cfg, **backbone_cfg, **decoder_cfg})
-    cfg.git_commit_version = str(
-        subprocess.check_output(["git", "rev-parse", "--short", "HEAD"]).strip()
-    )
 
     data = SemanticDatasetModule(cfg)
     model = Mask4D(cfg)
