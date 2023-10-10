@@ -74,6 +74,10 @@ python3 scripts/train_model.py --w [path_to_3D_model]
   title = {{Mask4D: End-to-End Mask-Based 4D Panoptic Segmentation for LiDAR Sequences}},
   journal = ral,
   year = 2023,
+  volume = {8},
+  number = {11},
+  pages = {7487-7494},
+  doi = {10.1109/LRA.2023.3320020},
   url = {https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/marcuzzi2023ral-meem.pdf},
 }
 ```
